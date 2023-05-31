@@ -1,0 +1,260 @@
+.services {
+  max-width: 100%;
+  background-color: $bg-color-services;
+  padding-top: 119px;
+  padding-bottom: 110px;
+
+  &__container {
+    width: 1140px;
+
+    .services__text {
+      &-title {
+        color: $white;
+        font-size: $fs-title-main;
+        font-weight: 700;
+        letter-spacing: 4px;
+        font-family: $font-family-base;
+        line-height: 29.91px;
+        position: relative;
+        padding-bottom: 25px;
+        margin-bottom: 0;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 87px;
+          height: 4px;
+          background-color: $button-opacity;
+          opacity: 0.15;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      &-main {
+        color: $white;
+        font-size: $fs-medium-small;
+        font-weight: 400;
+        font-family: $font-family-base;
+        line-height: 26px;
+        letter-spacing: 0.36px;
+        padding-top: 16px;
+        padding-bottom: 78px;
+        margin: 0;
+      }
+    }
+
+    .services__cards {
+      width: 1030px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      justify-content: space-around;
+
+      .services__card-1 {
+        width: 196px;
+        margin: 4px 0 0 -40px;
+
+        .services__card-img {
+          margin-bottom: 56px;
+        }
+
+        .services__card-title {
+          color: $white;
+          font-size: $fs-lg-extra;
+          font-weight: 700;
+          font-family: $font-family-base;
+          text-transform: uppercase;
+          margin-right: 13px;
+          margin-bottom: 16px;
+        }
+
+        .services__card-text {
+          color: $white;
+          font-family: $font-family-base;
+          font-size: $fs-base;
+          font-weight: 300;
+          letter-spacing: 0.32px;
+          line-height: 24px;
+        }
+      }
+
+      .services__card-2 {
+        width: 175px;
+        margin: 0 1px 0 8px;
+
+        .services__card-img {
+          margin-bottom: 55px;
+          margin-top: -1px;
+        }
+
+        .services__card-title {
+          color: $white;
+          font-size: $fs-lg-extra;
+          font-weight: 700;
+          font-family: $font-family-base;
+          text-transform: uppercase;
+          margin-right: 13px;
+          margin-bottom: 16px;
+        }
+
+        .services__card-text {
+          color: $white;
+          font-family: $font-family-base;
+          font-size: $fs-base;
+          font-weight: 300;
+          letter-spacing: 0.32px;
+          line-height: 24px;
+        }
+      }
+
+      .services__card-3 {
+        width: 197px;
+        margin: 0 1px 0 -2px;
+
+        .services__card-img {
+          margin-bottom: 56px;
+          margin-top: 3px;
+        }
+
+        .services__card-title {
+          color: $white;
+          font-size: $fs-lg-extra;
+          font-weight: 700;
+          font-family: $font-family-base;
+          text-transform: uppercase;
+          margin-right: -8px;
+          margin-bottom: 16px;
+        }
+
+        .services__card-text {
+          color: $white;
+          font-family: $font-family-base;
+          font-size: $fs-base;
+          font-weight: 300;
+          letter-spacing: 0.32px;
+          line-height: 24px;
+        }
+      }
+
+      .services__card-4 {
+        width: 195px;
+        margin: 0 -43px 0 0px;
+
+        .services__card-img {
+          margin-bottom: 51px;
+        }
+
+        .services__card-title {
+          color: $white;
+          font-size: $fs-lg-extra;
+          font-weight: 700;
+          font-family: $font-family-base;
+          text-transform: uppercase;
+          margin-bottom: 15px;
+        }
+
+        .services__card-text {
+          color: $white;
+          font-family: $font-family-base;
+          font-size: $fs-base;
+          font-weight: 300;
+          letter-spacing: 0.32px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $wide-width) {
+  .services {
+    &__container {
+      width: 992px;
+
+      .services__text {
+        &-main {
+          br {
+            display: none;
+          }
+        }
+      }
+
+      .services__cards {
+        justify-content: space-around;
+        width: auto;
+
+        & .services__card-1,
+        .services__card-2,
+        .services__card-3,
+        .services__card-4 {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .services {
+    &__container {
+      width: 768px;
+
+      .services__cards {
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .services {
+    &__container {
+      width: 480px;
+
+      .services__text {
+        &-title {
+          line-height: 33.91px;
+          font-size: $fs-title-medium-large;
+        }
+
+        &-main {
+          padding-bottom: 48px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $small-mobile-width) {
+  .services {
+    &__container {
+      width: 320px;
+
+      .services__cards {
+        flex-direction: column;
+        align-items: center;
+
+        & .services__card-1,
+        .services__card-2,
+        .services__card-3,
+        .services__card-4 {
+          .services__card-img {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $extra-small-mobile-width) {
+  .services {
+    &__container {
+      width: 290px;
+    }
+  }
+}

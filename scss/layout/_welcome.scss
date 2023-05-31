@@ -1,0 +1,112 @@
+.welcome {
+  max-width: 100%;
+  background-color: $bg-color-header;
+  display: flex;
+  justify-content: center;
+  padding-top: 228px;
+  padding-bottom: 145px;
+
+  &__container {
+    width: 1140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .welcome__text {
+      font-size: $fs-welcome-title;
+      font-family: $font-family-base;
+      color: $color-text;
+      font-weight: 700;
+      text-align: center;
+      line-height: 48.82px;
+      letter-spacing: 0.2px;
+    }
+
+    .welcome__button {
+      display: inline-block;
+      text-align: center;
+      margin-top: 39px;
+      height: 70px;
+      width: 293px;
+      background-color: #eb7d4b;
+      font-size: $fs-medium-small;
+      font-family: $font-family-base;
+      color: $color-text;
+      font-weight: 700;
+      position: relative;
+      border-radius: 5px;
+      padding-top: 25px;
+      transition: background-color 0.3s ease;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $button-opacity;
+        opacity: 0.15;
+      }
+
+      &:hover {
+        background-color: darken(#eb7d4b, 10%);
+      }
+    }
+  }
+}
+
+// Media welcome block
+
+@media (max-width: $wide-width) {
+  .welcome {
+    &__container {
+      width: 992px;
+    }
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .welcome {
+    &__container {
+      width: 768px;
+      .welcome__text {
+        font-size: $fs-title-medium-large;
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .welcome {
+    &__container {
+      width: 480px;
+      .welcome__text {
+        line-height: 38.82px;
+      }
+      .welcome__button {
+        margin-top: 19px;
+      }
+    }
+  }
+}
+
+@media (max-width: $small-mobile-width) {
+  .welcome {
+    &__container {
+      width: 320px;
+      .welcome__text {
+        line-height: 28.82px;
+      }
+      .welcome__button {
+        margin-top: 0;
+        width: 250px;
+        height: 55px;
+        padding-top: 17px;
+      }
+    }
+  }
+}

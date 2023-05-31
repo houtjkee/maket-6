@@ -1,0 +1,21 @@
+// Header style
+.header {
+  max-width: 100%;
+  background-color: $bg-color-header;
+  color: $white;
+  padding-top: 57px;
+
+  &__navbar {
+    .header__container {
+      max-width: 1140px;
+      color: $white;
+      margin: 0 auto;
+
+      & a {
+        color: $white;
+      }
+    }
+  }
+}
+
+
