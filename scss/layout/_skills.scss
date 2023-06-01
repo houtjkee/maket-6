@@ -1,0 +1,151 @@
+// Skills style block
+.skills {
+  max-width: 100%;
+  background-color: $white;
+  padding-top: 117px;
+  padding-bottom: 106px;
+
+  &__container {
+    width: 1170px;
+
+    .skills__text {
+      &-title {
+        color: $team-text-color;
+        font-family: $font-family-base;
+        font-size: $fs-title-main;
+        font-weight: 700;
+        line-height: 29.91px;
+        letter-spacing: 4px;
+        position: relative;
+        padding-bottom: 26px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 87px;
+          height: 4px;
+          background-color: $button-opacity-team;
+          opacity: 0.15;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      &-main {
+        color: $team-text-color;
+        font-size: $fs-medium-small;
+        font-family: $font-family-base;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0.36px;
+        padding-top: 18px;
+        padding-bottom: 82px;
+        margin: 0;
+      }
+    }
+
+    .skills__scale {
+      padding: 0 31px;
+
+      &-card {
+        img {
+          padding-bottom: 31px;
+        }
+        &-text {
+          color: $team-text-color;
+          font-family: $font-family-base;
+          font-size: $fs-lg-extra;
+          font-weight: 700;
+          line-height: 18px;
+          letter-spacing: 0.48px;
+          text-transform: uppercase;
+        }
+        &:first-child {
+          margin-right: 14px;
+        }
+      }
+    }
+  }
+}
+
+// Skills media style
+
+@media (max-width: $wide-width) {
+  .skills {
+    &__container {
+      width: 992px;
+    }
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .skills {
+    &__container {
+      width: 768px;
+        .skills__scale {
+          padding: 0;
+          margin: 0;
+          justify-content: space-between!important;
+          &-card {
+            &:first-child {
+              margin-right: 0;
+            }
+          }
+        }
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .skills {
+    &__container {
+      width: 480px;
+      .skills__text {
+        &-title {
+          letter-spacing: 2px;
+        }
+        &-main {
+          padding-bottom: 50px;
+          br {
+            display: none;
+          }
+        }
+      }
+      .skills__scale {
+        &-card {
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $small-mobile-width) {
+  .skills {
+    &__container {
+      width: 320px;
+      .skills__text {
+        &-title {
+          font-size: $fs-large;
+        }
+        &-main {
+          font-size: $fs-base;
+        }
+      }
+      .skills__scale {
+        justify-content: space-around!important;
+      }
+    }
+  }
+}
+
+@media (max-width: $extra-small-mobile-width) {
+  .skills {
+    &__container {
+      width: 290px;
+    }
+  }
+}

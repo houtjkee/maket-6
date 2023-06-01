@@ -1,3 +1,4 @@
+// Welcome block style
 .welcome {
   max-width: 100%;
   background-color: $bg-color-header;
@@ -7,7 +8,7 @@
   padding-bottom: 145px;
 
   &__container {
-    width: 1140px;
+    width: 1170px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,14 +29,13 @@
       margin-top: 39px;
       height: 70px;
       width: 293px;
-      background-color: #eb7d4b;
+      background-color: $bg-button;
       font-size: $fs-medium-small;
       font-family: $font-family-base;
       color: $color-text;
       font-weight: 700;
       position: relative;
       border-radius: 5px;
-      padding-top: 25px;
       transition: background-color 0.3s ease;
 
       &::after {

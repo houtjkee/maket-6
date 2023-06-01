@@ -1,17 +1,27 @@
 // Colors
 $white: #fff;
 $black: #000;
-$grey: #666666;
+$grey: #c2c2c2;
 $bg-color-header: #87509c;
 $color-text: #f7f3ea;
 $bg-button: #eb7d4b;
 $button-opacity: #000000;
 $button-opacity-team: #bdd1df;
+$opacity-skills: #dfe8ed;
 $bg-color-services: #17c2a4;
 $bg-color-team: #e7f1f8;
 $team-text-color: #3c4761;
 $text-color-worker: #27283d;
 $text-color-position: #30bae7;
+$bg-color-portfolio: #ffdd99;
+$portfolio-opacity: #e5c37f;
+$button-text-color: #393939;
+$bg-color-button: #C2C2C2FF;
+$bg-color-testimonials: #d74680;
+$opacity-testimonials: #d74680;
+$job-text-color: #ffdd99;
+$bg-color-registration: #3c5499;
+$registration-opacity: #273a71;
 
 // Font size.
 $fs-extra-small: 0.75em; // 12px
@@ -21,6 +31,7 @@ $fs-base: 16px;
 $fs-medium-small: 1.125em; // 18px
 $fs-large-small: 1.187em; // 19px
 $fs-small-medium: 1.25em; // 20px
+$fs-testimonials-commet: 1.3125em; // 21px
 $fs-lg-md: 1.37em; // 22px
 $fs-lg-extra: 1.5em; // 24px
 $fs-medium: 1.562em; // 25px
@@ -43,5 +54,6 @@ $font-family-base: 'Titillium Web', sans-serif;
 $wide-width: 1200px;
 $desktop-width: 992px;
 $tablet-width: 768px;
+$share-tablet-width: 767px;
 $small-mobile-width: 480px;
 $extra-small-mobile-width: 320px

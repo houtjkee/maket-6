@@ -1,93 +1,196 @@
+// Team block style
 .team {
   max-width: 100%;
   background-color: $bg-color-team;
-    &__container {
-      width: 1140px;
-      padding-top: 119px;
-        .team__text {
-          &-title {
-            color: $team-text-color;
-            font-size: $fs-title-team;
-            font-weight: 700;
-            font-family: $font-family-base;
-            line-height: 30.87px;
-            letter-spacing: 3.4px;
-            position: relative;
-            padding-bottom: 27px;
-            margin-bottom: 0;
+  padding-top: 119px;
+  padding-bottom: 126px;
 
-            &::after {
-              content: '';
-              position: absolute;
-              width: 87px;
-              height: 6px;
-              background-color: $button-opacity-team;
-              opacity: 0.75;
-              bottom: 0;
-              left: 50%;
-              transform: translateX(-50%);
-            }
-          }
-          &-main {
-            color: $team-text-color;
-            font-size: $fs-large-small;
-            font-weight: 400;
-            font-family: $font-family-base;
-            line-height: 26.84px;
-            letter-spacing: 0;
-            padding-top: 16px;
-            padding-bottom: 77px;
-            margin: 0;
+  &__container {
+    width: 1170px;
+
+    .team__text {
+      &-title {
+        color: $team-text-color;
+        font-size: $fs-title-team;
+        font-weight: 700;
+        font-family: $font-family-base;
+        line-height: 30.87px;
+        letter-spacing: 3.4px;
+        position: relative;
+        padding-bottom: 27px;
+        margin-bottom: 0;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 87px;
+          height: 6px;
+          background-color: $button-opacity-team;
+          opacity: 0.75;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      &-main {
+        color: $team-text-color;
+        font-size: $fs-large-small;
+        font-weight: 400;
+        font-family: $font-family-base;
+        line-height: 26.84px;
+        letter-spacing: 0;
+        padding-top: 16px;
+        padding-bottom: 77px;
+        margin: 0;
+      }
+    }
+
+    .team__cards {
+      width: 1040px;
+      margin: 0 auto;
+
+      .team__card {
+        max-width: none;
+        padding: 0;
+
+        &-img {
+          padding-bottom: 41px;
+        }
+
+        &-worker {
+          font-family: $font-family-base;
+          font-size: $fs-lg-extra;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: $text-color-worker;
+          line-height: 18px;
+          letter-spacing: 0.48px;
+          margin-bottom: 13px;
+        }
+
+        &-position {
+          font-family: $font-family-base;
+          font-size: $fs-base;
+          font-weight: 400;
+          color: $text-color-position;
+          line-height: 18px;
+          letter-spacing: 0.32px;
+          margin-bottom: 20px;
+        }
+
+        &-desc {
+          font-family: $font-family-base;
+          font-size: $fs-base;
+          font-weight: 300;
+          color: $team-text-color;
+          line-height: 24px;
+          letter-spacing: 0.32px;
+          margin-bottom: 28px;
+        }
+
+        &-icons {
+          align-items: center;
+          flex-wrap: nowrap;
+          margin: 0;
+          padding: 0;
+          justify-content: center;
+
+          a {
+            margin: 0 6px;
           }
         }
+      }
+    }
+  }
+}
+
+// Team media style
+
+@media (max-width: $wide-width) {
+  .team {
+    &__container {
+      width: 992px;
+
       .team__cards {
-        width: 1040px;
-        margin: 0 auto;
-          .team__card {
-            max-width: none;
-            padding: 0;
-            &-img {
-              padding-bottom: 41px;
-            }
-            &-worker {
-              font-family: $font-family-base;
-              font-size: $fs-lg-extra;
-              font-weight: 700;
-              text-transform: uppercase;
-              color: $text-color-worker;
-              line-height: 18px;
-              letter-spacing: 0.48px;
-              margin-bottom: 13px;
-            }
-            &-position {
-              font-family: $font-family-base;
-              font-size: $fs-base;
-              font-weight: 400;
-              color: $text-color-position;
-              line-height: 18px;
-              letter-spacing: 0.32px;
-              margin-bottom: 20px;
-            }
-            &-desc {
-              font-family: $font-family-base;
-              font-size: $fs-base;
-              font-weight: 300;
-              color: $team-text-color;
-              line-height: 24px;
-              letter-spacing: 0.32px;
-              margin-bottom: 28px;
-            }
-            &-icons {
-              align-items: center;
-              flex-wrap: nowrap;
-              margin: 0;
-              padding: 0;
-              justify-content: center;
-              &-item {
-                padding: 0;
-              }
-            }
+        width: 962px;
+      }
+    }
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .team {
+    &__container {
+      width: 768px;
+
+      .team__cards {
+        width: 738px;
+
+        .team__card:not(:last-child) {
+          margin-bottom: 20px;
+        }
+        &-desc {
+              padding: 0 10px;
           }
       }
     }
+  }
+}
+
+@media (max-width: $share-tablet-width) {
+  .team {
+    &__container {
+      width: 480px;
+        .team__text {
+          &-title {
+            font-size: $fs-title-medium-large;
+            line-height: 40px;
+            padding-bottom: 22px;
+            letter-spacing: 3px;
+          }
+        }
+      .team__cards {
+        width: 450px;
+
+        .team__card {
+          &-desc {
+            padding: 0 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $small-mobile-width) {
+  .team {
+    &__container {
+      width: 320px;
+      .team__text {
+        &-title {
+          font-size: $fs-large;
+          line-height: 35px;
+        }
+        &-main {
+          font-size: $fs-base;
+          padding-bottom: 45px;
+        }
+      }
+        .team__cards {
+          width: 290px;
+        }
+    }
+  }
+}
+
+@media (max-width: $extra-small-mobile-width) {
+  .team {
+    &__container {
+      width: 290px;
+      .team__cards {
+        width: 250px;
+      }
+    }
+  }
 }

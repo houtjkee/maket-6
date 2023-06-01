@@ -1,3 +1,4 @@
+// Services block style
 .services {
   max-width: 100%;
   background-color: $bg-color-services;
@@ -5,7 +6,7 @@
   padding-bottom: 110px;
 
   &__container {
-    width: 1140px;
+    width: 1170px;
 
     .services__text {
       &-title {
@@ -169,6 +170,8 @@
   }
 }
 
+// Services media style
+
 @media (max-width: $wide-width) {
   .services {
     &__container {
@@ -234,6 +237,14 @@
     &__container {
       width: 320px;
 
+      .services__text {
+        &-title {
+          font-size: $fs-large;
+        }
+        &-main {
+          font-size: $fs-base;
+        }
+      }
       .services__cards {
         flex-direction: column;
         align-items: center;
