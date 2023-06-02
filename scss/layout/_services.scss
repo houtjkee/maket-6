@@ -10,39 +10,19 @@
 
     .services__text {
       &-title {
-        color: $white;
-        font-size: $fs-title-main;
-        font-weight: 700;
-        letter-spacing: 4px;
-        font-family: $font-family-base;
-        line-height: 29.91px;
-        position: relative;
+        @include title-light;
         padding-bottom: 25px;
-        margin-bottom: 0;
 
         &::after {
-          content: '';
-          position: absolute;
-          width: 87px;
-          height: 4px;
+          @include title-underline;
           background-color: $button-opacity;
-          opacity: 0.15;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
         }
       }
 
       &-main {
-        color: $white;
-        font-size: $fs-medium-small;
-        font-weight: 400;
-        font-family: $font-family-base;
-        line-height: 26px;
-        letter-spacing: 0.36px;
+        @include text-light;
         padding-top: 16px;
         padding-bottom: 78px;
-        margin: 0;
       }
     }
 

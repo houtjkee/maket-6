@@ -10,40 +10,19 @@
 
     .portfolio__text {
       &-title {
-        color: $team-text-color;
-        font-family: $font-family-base;
-        font-size: $fs-title-main;
-        font-weight: 700;
-        line-height: 29.91px;
-        letter-spacing: 4px;
-        position: relative;
+        @include title-dark;
         padding-bottom: 25px;
-        margin-bottom: 0;
-        text-transform: uppercase;
 
         &::after {
-          content: '';
-          position: absolute;
-          width: 87px;
-          height: 4px;
+          @include title-underline;
           background-color: $portfolio-opacity;
-          opacity: 0.15;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
         }
       }
 
       &-main {
-        color: $team-text-color;
-        font-size: $fs-medium-small;
-        font-family: $font-family-base;
-        font-weight: 400;
-        line-height: 26px;
-        letter-spacing: 0.36px;
+        @include text-dark;
         padding-top: 18px;
         padding-bottom: 40px;
-        margin: 0;
       }
     }
 
@@ -122,31 +101,12 @@
     }
 
     .portfolio__more {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-      height: 70px;
-      width: 293px;
+      @include button;
       background-color: $bg-color-services;
-      font-size: $fs-medium-small;
-      font-family: $font-family-base;
-      color: $color-text;
-      font-weight: 700;
-      position: relative;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-      text-transform: uppercase;
 
       &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
+        @include button-opacity;
         background-color: $button-opacity;
-        opacity: 0.15;
       }
 
       &:hover {

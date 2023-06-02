@@ -1,21 +1,108 @@
-// Header style
+// Header style block
 .header {
   max-width: 100%;
-  background-color: $bg-color-header;
-  color: $white;
-  padding-top: 57px;
 
   &__navbar {
+    background-color: $bg-color-header;
     .header__container {
-      max-width: 1170px;
-      color: $white;
+      width: 1170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
       margin: 0 auto;
+      padding: 51px 51px 20px 77px;
+       .header__burger-menu {
+         margin: 0 !important;
+         justify-content: flex-end;
+         &-list {
+           &-item {
+             padding: 5px 0 5px 25px;
+             &-link {
+               color: $white;
+               font-family: $font-family-base;
+               font-size: $fs-base;
+               font-weight: 400;
+               line-height: 18px;
+               text-transform: uppercase;
+               text-decoration: none;
+               padding: 10px 10px ;
+                &:hover {
+                  color: $white;
+                  background-color: $button-hover;
+                  border-radius: 5px;
+                }
+             }
+           }
+         }
+       }
+    }
+  }
+}
 
-      & a {
-        color: $white;
+// Header media style
+
+@media (max-width: $wide-width) {
+  .header {
+   &__navbar {
+     .header__container {
+       width: 992px;
+     }
+   }
+  }
+}
+
+@media (max-width: $header-desktop-width) {
+  .header {
+    &__navbar {
+      .header__container {
+        justify-content: space-between;
+        padding: 51px 30px 20px 30px;
+        width: 768px;
+          .navbar-toggler {
+            border: none;
+          }
+        .header__burger-menu {
+          &-list {
+            align-items: flex-start;
+            &-item {
+              padding: 5px 0 0 0;
+            }
+          }
+        }
       }
     }
   }
 }
 
+@media (max-width: $tablet-width) {
+  .header {
+    &__navbar {
+      .header__container {
+        padding: 30px 10px 20px 10px;
+        width: 480px;
+      }
+    }
+  }
+}
 
+@media (max-width: $small-mobile-width) {
+  .header {
+    &__navbar {
+      .header__container {
+        width: 320px;
+        padding: 20px 10px 20px 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: $extra-small-mobile-width) {
+  .header {
+    &__navbar {
+      .header__container {
+        width: 290px;
+      }
+    }
+  }
+}

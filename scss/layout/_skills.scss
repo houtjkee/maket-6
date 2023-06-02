@@ -10,40 +10,19 @@
 
     .skills__text {
       &-title {
-        color: $team-text-color;
-        font-family: $font-family-base;
-        font-size: $fs-title-main;
-        font-weight: 700;
-        line-height: 29.91px;
-        letter-spacing: 4px;
-        position: relative;
+        @include title-dark;
         padding-bottom: 26px;
-        margin-bottom: 0;
-        text-transform: uppercase;
 
         &::after {
-          content: '';
-          position: absolute;
-          width: 87px;
-          height: 4px;
+          @include title-underline;
           background-color: $button-opacity-team;
-          opacity: 0.15;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
         }
       }
 
       &-main {
-        color: $team-text-color;
-        font-size: $fs-medium-small;
-        font-family: $font-family-base;
-        font-weight: 400;
-        line-height: 26px;
-        letter-spacing: 0.36px;
+        @include text-dark;
         padding-top: 18px;
         padding-bottom: 82px;
-        margin: 0;
       }
     }
 

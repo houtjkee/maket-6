@@ -14,38 +14,39 @@
 <body>
 <!-- All content block -->
 <div class="wrapper">
-  <!-- Header block
+  <!-- Header block -->
   <header class="header">
-    <nav class="header__navbar navbar-expand-lg navbar-light ">
-      <div class="header__container">
-        <a class="navbar-brand header__title" href="#">Cuda</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    <nav class="header__navbar navbar-expand-lg fixed-top navbar-dark">
+      <div class="header__container row">
+        <a class="header__title navbar-brand" href="#"><img src="img/header/logo.png" class="img-fluid" alt="Cuda"></a>
+        <button class="header__button navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
+          <span class="header__button-icon navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto ml-2">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+        <div class="header__burger-menu collapse navbar-collapse" id="navbarContent">
+          <ul class="header__burger-menu-list navbar-nav ml-auto ml-2">
+            <li class="header__burger-menu-list-item nav-item">
+              <a class="header__burger-menu-list-item-link nav-link" href="#home">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+            <li class="header__burger-menu-list-item nav-item">
+              <a class="header__burger-menu-list-item-link nav-link" href="#about">About</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Work</a>
+            <li class="header__burger-menu-list-item nav-item">
+              <a class="header__burger-menu-list-item-link nav-link" href="#work">Work</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
+            <li class="header__burger-menu-list-item nav-item">
+              <a class="header__burger-menu-list-item-link nav-link" href="#blog">Blog</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+            <li class="header__burger-menu-list-item nav-item">
+              <a class="header__burger-menu-list-item-link nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-  </header> -->
+  </header>
   <!-- Welcome block -->
-  <div class="welcome">
+  <div class="welcome" id="home">
     <div class="welcome__container container-fluid">
       <p class="welcome__text">Hi there! We are the new kids on the block <br> and we build awesome websites and mobile
         apps.</p>
@@ -53,10 +54,10 @@
     </div>
   </div>
   <!-- Services block -->
-  <div class="services">
+  <div class="services" id="about">
     <div class="services__container container-fluid">
       <div class="services__text text-center">
-        <h2 class="services__text-title">SERVICES WE PROVIDE</h2>
+        <h2 class="services__text-title">Services we provide</h2>
         <p class="services__text-main">We are working with both individuals and businesses from all over the globe <br>
           to create awesome websites and applications.</p>
       </div>
@@ -176,7 +177,7 @@
     </div>
   </div>
   <!-- Portfolio block -->
-  <div class="portfolio">
+  <div class="portfolio" id="work">
     <div class="portfolio__container container-fluid">
       <div class="portfolio__text text-center">
         <h2 class="portfolio__text-title">Our portfolio</h2>
@@ -211,7 +212,7 @@
     </div>
   </div>
   <!-- Testimonials block -->
-  <div class="testimonials">
+  <div class="testimonials" id="blog">
     <div class="testimonials__container container-fluid">
       <div class="testimonials__text text-center">
         <h2 class="testimonials__text-title">What people say about us</h2>
@@ -266,22 +267,37 @@
     </div>
   </div>
   <!-- Registration block -->
-  <div class="registration">
+  <div class="registration" id="contact">
     <div class="registration__container container-fluid">
       <div class="registration__text text-center">
         <h2 class="registration__text-title">Get in touch</h2>
-        <p class="registration__text-main">1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (202) 456-1111</p>
+        <p class="registration__text-main">1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America.
+          Tel: (202) 456-1111</p>
       </div>
       <div class="registration__form text-center">
         <form class="registration__form-area text-center">
-          <input type="text" class="registration__form-area-name" placeholder="Your Name">
-          <input type="email" class="registration__form-area-email" placeholder="Your Email">
-          <textarea placeholder="Your message" required></textarea>
-          <input type="submit" class="registration__form-area-submit" value="Send Message">
+          <input type="text" id="name" class="form-name" placeholder="Your Name *" required pattern="[A-Za-z\s]+">
+          <input type="email" id="email" class="form-email" placeholder="Your Email *" required>
+          <textarea placeholder="Your message *" class="form-textarea" required></textarea>
+          <input type="submit" class="form-submit" value="Send Message">
         </form>
       </div>
     </div>
   </div>
+  <!-- Footer block -->
+  <footer class="footer">
+    <div class="footer__container container-fluid">
+      <div class="footer__links row">
+        <a href="#" class="footer__link">Facebook</a>
+        <a href="#" class="footer__link">Twitter</a>
+        <a href="#" class="footer__link">Google+</a>
+        <a href="#" class="footer__link">LinkedIn</a>
+        <a href="#" class="footer__link">Behance</a>
+        <a href="#" class="footer__link">Dribbble</a>
+        <a href="#" class="footer__link">GitHub</a>
+      </div>
+    </div>
+  </footer>
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"

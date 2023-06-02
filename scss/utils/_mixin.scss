@@ -1,0 +1,85 @@
+// mixin for text
+@mixin title-dark () {
+  color: $team-text-color;
+  font-family: $font-family-base;
+  font-size: $fs-title-main;
+  font-weight: 700;
+  line-height: 29.91px;
+  letter-spacing: 4px;
+  position: relative;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+@mixin title-underline () {
+  content: '';
+  position: absolute;
+  width: 87px;
+  height: 4px;
+  opacity: 0.15;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin text-dark () {
+  color: $team-text-color;
+  font-size: $fs-medium-small;
+  font-family: $font-family-base;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.36px;
+  margin: 0;
+}
+
+@mixin title-light () {
+  color: $white;
+  font-family: $font-family-base;
+  font-size: $fs-title-main;
+  font-weight: 700;
+  line-height: 29.91px;
+  letter-spacing: 4px;
+  position: relative;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+@mixin text-light () {
+  color: $white;
+  font-size: $fs-medium-small;
+  font-family: $font-family-base;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.36px;
+  margin: 0;
+}
+
+// Button mixin
+
+@mixin button () {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 70px;
+  width: 293px;
+  font-size: $fs-medium-small;
+  font-family: $font-family-base;
+  color: $color-text;
+  font-weight: 700;
+  position: relative;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+@mixin button-opacity () {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  opacity: 0.15;
+}
+

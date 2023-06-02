@@ -84,19 +84,80 @@ footer {
 
 .header {
   max-width: 100%;
+}
+.header__navbar {
   background-color: #87509c;
-  color: #fff;
-  padding-top: 57px;
 }
 .header__navbar .header__container {
-  max-width: 1170px;
-  color: #fff;
+  width: 1170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
   margin: 0 auto;
+  padding: 51px 51px 20px 77px;
 }
-.header__navbar .header__container a {
+.header__navbar .header__container .header__burger-menu {
+  margin: 0 !important;
+  justify-content: flex-end;
+}
+.header__navbar .header__container .header__burger-menu-list-item {
+  padding: 5px 0 5px 25px;
+}
+.header__navbar .header__container .header__burger-menu-list-item-link {
   color: #fff;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 10px;
+}
+.header__navbar .header__container .header__burger-menu-list-item-link:hover {
+  color: #fff;
+  background-color: #643a79;
+  border-radius: 5px;
 }
 
+@media (max-width: 1200px) {
+  .header__navbar .header__container {
+    width: 992px;
+  }
+}
+@media (max-width: 991px) {
+  .header__navbar .header__container {
+    justify-content: space-between;
+    padding: 51px 30px 20px 30px;
+    width: 768px;
+  }
+  .header__navbar .header__container .navbar-toggler {
+    border: none;
+  }
+  .header__navbar .header__container .header__burger-menu-list {
+    align-items: flex-start;
+  }
+  .header__navbar .header__container .header__burger-menu-list-item {
+    padding: 5px 0 0 0;
+  }
+}
+@media (max-width: 768px) {
+  .header__navbar .header__container {
+    padding: 30px 10px 20px 10px;
+    width: 480px;
+  }
+}
+@media (max-width: 480px) {
+  .header__navbar .header__container {
+    width: 320px;
+    padding: 20px 10px 20px 10px;
+  }
+}
+@media (max-width: 320px) {
+  .header__navbar .header__container {
+    width: 290px;
+  }
+}
 .welcome {
   max-width: 100%;
   background-color: #87509c;
@@ -121,12 +182,12 @@ footer {
   letter-spacing: 0.2px;
 }
 .welcome__container .welcome__button {
-  display: inline-block;
-  text-align: center;
-  margin-top: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
   height: 70px;
   width: 293px;
-  background-color: #eb7d4b;
   font-size: 1.125em;
   font-family: "Titillium Web", sans-serif;
   color: #f7f3ea;
@@ -134,6 +195,9 @@ footer {
   position: relative;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  background-color: #eb7d4b;
+  margin-top: 40px;
 }
 .welcome__container .welcome__button::after {
   content: "";
@@ -142,8 +206,8 @@ footer {
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: #000000;
   opacity: 0.15;
+  background-color: #000000;
 }
 .welcome__container .welcome__button:hover {
   background-color: #e65c1d;
@@ -166,6 +230,10 @@ footer {
   }
 }
 @media (max-width: 768px) {
+  .welcome {
+    padding-top: 150px;
+    padding-bottom: 110px;
+  }
   .welcome__container {
     width: 480px;
   }
@@ -187,7 +255,6 @@ footer {
     margin-top: 0;
     width: 250px;
     height: 55px;
-    padding-top: 17px;
   }
 }
 .services {
@@ -201,36 +268,37 @@ footer {
 }
 .services__container .services__text-title {
   color: #fff;
+  font-family: "Titillium Web", sans-serif;
   font-size: 2.5em;
   font-weight: 700;
-  letter-spacing: 4px;
-  font-family: "Titillium Web", sans-serif;
   line-height: 29.91px;
+  letter-spacing: 4px;
   position: relative;
-  padding-bottom: 25px;
   margin-bottom: 0;
+  text-transform: uppercase;
+  padding-bottom: 25px;
 }
 .services__container .services__text-title::after {
   content: "";
   position: absolute;
   width: 87px;
   height: 4px;
-  background-color: #000000;
   opacity: 0.15;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  background-color: #000000;
 }
 .services__container .services__text-main {
   color: #fff;
   font-size: 1.125em;
-  font-weight: 400;
   font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
   line-height: 26px;
   letter-spacing: 0.36px;
+  margin: 0;
   padding-top: 16px;
   padding-bottom: 78px;
-  margin: 0;
 }
 .services__container .services__cards {
   width: 1030px;
@@ -575,20 +643,20 @@ footer {
   line-height: 29.91px;
   letter-spacing: 4px;
   position: relative;
-  padding-bottom: 26px;
   margin-bottom: 0;
   text-transform: uppercase;
+  padding-bottom: 26px;
 }
 .skills__container .skills__text-title::after {
   content: "";
   position: absolute;
   width: 87px;
   height: 4px;
-  background-color: #bdd1df;
   opacity: 0.15;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  background-color: #bdd1df;
 }
 .skills__container .skills__text-main {
   color: #3c4761;
@@ -597,9 +665,9 @@ footer {
   font-weight: 400;
   line-height: 26px;
   letter-spacing: 0.36px;
+  margin: 0;
   padding-top: 18px;
   padding-bottom: 82px;
-  margin: 0;
 }
 .skills__container .skills__scale {
   padding: 0 31px;
@@ -691,20 +759,20 @@ footer {
   line-height: 29.91px;
   letter-spacing: 4px;
   position: relative;
-  padding-bottom: 25px;
   margin-bottom: 0;
   text-transform: uppercase;
+  padding-bottom: 25px;
 }
 .portfolio__container .portfolio__text-title::after {
   content: "";
   position: absolute;
   width: 87px;
   height: 4px;
-  background-color: #e5c37f;
   opacity: 0.15;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  background-color: #e5c37f;
 }
 .portfolio__container .portfolio__text-main {
   color: #3c4761;
@@ -713,9 +781,9 @@ footer {
   font-weight: 400;
   line-height: 26px;
   letter-spacing: 0.36px;
+  margin: 0;
   padding-top: 18px;
   padding-bottom: 40px;
-  margin: 0;
 }
 .portfolio__container .portfolio__buttons {
   padding-bottom: 65px;
@@ -783,7 +851,6 @@ footer {
   margin: 0 auto;
   height: 70px;
   width: 293px;
-  background-color: #17c2a4;
   font-size: 1.125em;
   font-family: "Titillium Web", sans-serif;
   color: #f7f3ea;
@@ -792,6 +859,7 @@ footer {
   border-radius: 5px;
   transition: background-color 0.3s ease;
   text-transform: uppercase;
+  background-color: #17c2a4;
 }
 .portfolio__container .portfolio__more::after {
   content: "";
@@ -800,8 +868,8 @@ footer {
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: #000000;
   opacity: 0.15;
+  background-color: #000000;
 }
 .portfolio__container .portfolio__more:hover {
   background-color: #12947d;
@@ -915,20 +983,20 @@ footer {
   line-height: 29.91px;
   letter-spacing: 4px;
   position: relative;
-  padding-bottom: 26px;
   margin-bottom: 0;
   text-transform: uppercase;
+  padding-bottom: 26px;
 }
 .testimonials__container .testimonials__text-title::after {
   content: "";
   position: absolute;
   width: 87px;
   height: 4px;
-  background-color: #962150;
   opacity: 0.15;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  background-color: #962150;
 }
 .testimonials__container .testimonials__text-main {
   color: #fff;
@@ -937,9 +1005,9 @@ footer {
   font-weight: 400;
   line-height: 26px;
   letter-spacing: 0.36px;
+  margin: 0;
   padding-top: 18px;
   padding-bottom: 64px;
-  margin: 0;
 }
 .testimonials__container .testimonials__comments-item {
   margin: 0;
@@ -1159,20 +1227,20 @@ footer {
   line-height: 29.91px;
   letter-spacing: 4px;
   position: relative;
-  padding-bottom: 25px;
   margin-bottom: 0;
   text-transform: uppercase;
+  padding-bottom: 25px;
 }
 .registration__container .registration__text-title::after {
   content: "";
   position: absolute;
   width: 87px;
   height: 4px;
-  background-color: #273a71;
   opacity: 0.15;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  background-color: #273a71;
 }
 .registration__container .registration__text-main {
   color: #fff;
@@ -1181,28 +1249,32 @@ footer {
   font-weight: 400;
   line-height: 26px;
   letter-spacing: 0.36px;
+  margin: 0;
   padding-top: 18px;
   padding-bottom: 74px;
-  margin: 0;
 }
-.registration__container .registration__form-area-name, .registration__container .registration__form-area-email {
+.registration__container .registration__form-area .form-name, .registration__container .registration__form-area .form-email {
   width: 414px;
   height: 56px;
-  color: #ffffff;
+  color: #fff;
   text-align: left;
   padding-left: 25px;
-  line-height: 56px;
   margin: 0 14px 27px 14px;
   background-color: #273a71;
 }
-.registration__container .registration__form-area-submit {
+.registration__container .registration__form-area .form-name::-moz-placeholder, .registration__container .registration__form-area .form-email::-moz-placeholder {
+  color: #fff;
+}
+.registration__container .registration__form-area .form-name::placeholder, .registration__container .registration__form-area .form-email::placeholder {
+  color: #fff;
+}
+.registration__container .registration__form-area .form-submit {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
   height: 70px;
   width: 293px;
-  background-color: #30bae7;
   font-size: 1.125em;
   font-family: "Titillium Web", sans-serif;
   color: #f7f3ea;
@@ -1211,25 +1283,183 @@ footer {
   border-radius: 5px;
   transition: background-color 0.3s ease;
   text-transform: uppercase;
+  background-color: #30bae7;
 }
-.registration__container .registration__form-area-submit::after {
+.registration__container .registration__form-area .form-submit::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: #000000;
   opacity: 0.15;
+  background-color: #000000;
 }
-.registration__container .registration__form-area-submit:hover {
+.registration__container .registration__form-area .form-submit:hover {
   background-color: #18a0cc;
 }
 .registration__container .registration__form textarea {
   width: 860px;
   height: 200px;
-  color: #ffffff;
-  line-height: 200px;
-  margin: 0 0 55px 0;
+  color: #fff;
+  margin: 0 0 54px 0;
   background-color: #273a71;
+  padding: 24px 0 0 25px;
+}
+.registration__container .registration__form textarea::-moz-placeholder {
+  color: #fff;
+}
+.registration__container .registration__form textarea::placeholder {
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .registration__container {
+    width: 992px;
+  }
+}
+@media (max-width: 992px) {
+  .registration__container {
+    width: 768px;
+  }
+  .registration__container .registration__form-area .form-name, .registration__container .registration__form-area .form-email {
+    width: 350px;
+    margin: 0 7px 27px 7px;
+  }
+  .registration__container .registration__form-area textarea {
+    width: 720px;
+    margin: 0 0 40px 0;
+  }
+}
+@media (max-width: 768px) {
+  .registration__container {
+    width: 480px;
+  }
+  .registration__container .registration__text-title {
+    letter-spacing: 2px;
+  }
+  .registration__container .registration__form-area .form-name, .registration__container .registration__form-area .form-email {
+    width: 450px;
+    margin: 0 0 27px 0;
+  }
+  .registration__container .registration__form-area textarea {
+    width: 450px;
+    height: 150px;
+    margin: 0 0 40px 0;
+  }
+}
+@media (max-width: 480px) {
+  .registration__container {
+    width: 320px;
+  }
+  .registration__container .registration__text-title {
+    font-size: 1.875em;
+    padding-bottom: 20px;
+  }
+  .registration__container .registration__text-main {
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+  .registration__container .registration__form-area .form-name, .registration__container .registration__form-area .form-email {
+    width: 290px;
+    margin: 0 0 27px 0;
+  }
+  .registration__container .registration__form-area textarea {
+    width: 290px;
+    height: 125px;
+    margin: 0 0 30px 0;
+  }
+  .registration__container .registration__form-area .form-submit {
+    height: 60px;
+    width: 270px;
+  }
+}
+@media (max-width: 320px) {
+  .registration__container {
+    width: 290px;
+  }
+  .registration__container .registration__form-area .form-name, .registration__container .registration__form-area .form-email {
+    width: 260px;
+    margin: 0 0 20px 0;
+  }
+  .registration__container .registration__form-area textarea {
+    width: 260px;
+    height: 100px;
+    margin: 0 0 25px 0;
+  }
+  .registration__container .registration__form-area .form-submit {
+    height: 55px;
+    width: 260px;
+  }
+}
+.footer {
+  max-width: 100%;
+  background-color: #344b8e;
+}
+.footer__container {
+  width: 1170px;
+  height: 112px;
+  padding-top: 47px;
+}
+.footer__container .footer__links {
+  justify-content: center;
+}
+.footer__container .footer__links .footer__link {
+  color: #fff;
+  font-size: 1.5em;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  line-height: 29.91px;
+  letter-spacing: 0.48px;
+  margin: 0 28px;
+}
+.footer__container .footer__links .footer__link:hover {
+  color: #30bae7;
+}
+.footer__container .footer__links .footer__link:nth-child(2) {
+  color: #30bae7;
+}
+
+@media (max-width: 1200px) {
+  .footer__container {
+    width: 992px;
+  }
+  .footer__container .footer__links .footer__link {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 992px) {
+  .footer__container {
+    width: 768px;
+  }
+  .footer__container .footer__links .footer__link {
+    margin: 0 13px 0 10px;
+  }
+}
+@media (max-width: 768px) {
+  .footer__container {
+    width: 480px;
+    padding-top: 27px;
+  }
+  .footer__container .footer__links .footer__link {
+    margin: 0 4px 0 4px;
+  }
+}
+@media (max-width: 480px) {
+  .footer__container {
+    width: 320px;
+    padding-top: 11px;
+  }
+  .footer__container .footer__links .footer__link {
+    margin: 0 6px 0 6px;
+  }
+}
+@media (max-width: 320px) {
+  .footer__container {
+    width: 290px;
+  }
+  .footer__container .footer__links .footer__link {
+    font-size: 1.25em;
+    margin: 0 10px 0 10px;
+  }
 }
