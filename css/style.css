@@ -1416,9 +1416,6 @@ footer {
 .footer__container .footer__links .footer__link:hover {
   color: #30bae7;
 }
-.footer__container .footer__links .footer__link:nth-child(2) {
-  color: #30bae7;
-}
 
 @media (max-width: 1200px) {
   .footer__container {
