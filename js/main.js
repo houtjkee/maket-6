@@ -1,6 +1,37 @@
 /* Validation form */
 
-$(document).ready(function () {
+$(document).ready(function() {
+  const $footerEmailInput = $('#email');
+
+  function validateEmailField() {
+    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    const email = $footerEmailInput.val().trim();
+
+    if (!emailRegex.test(email)) {
+      $footerEmailInput.css({
+        border: '1px solid red',
+        boxShadow: 'inset 0 0 5px red'
+      });
+      return false;
+    } else {
+      $footerEmailInput.css({
+        border: '',
+        boxShadow: ''
+      });
+      return true;
+    }
+  }
+
+  $footerEmailInput.blur(validateEmailField);
+
+  $('form').submit(function(event) {
+    if (!validateEmailField()) {
+      event.preventDefault();
+    }
+  });
+});
+
+$(document).ready(function() {
   const $RegisterName = $('#name');
   const $RegisterEmail = $('#email');
   const $RegisterMessage = $('.form-textarea');
@@ -22,27 +53,29 @@ $(document).ready(function () {
     }
   }
 
-  $RegisterName.blur(function () {
-    validateField($RegisterName, /^[A-Za-z\s]+$/);
+  $RegisterName.blur(function() {
+    return validateField($RegisterName, /^[A-Za-z\s]+$/);
   });
 
-  $RegisterEmail.blur(function () {
-    validateField($RegisterEmail, /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
+  $RegisterEmail.blur(function() {
+    return validateField($RegisterEmail, /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
   });
 
-  $RegisterMessage.blur(function () {
-    validateField($RegisterMessage, /^.+$/);
+  $RegisterMessage.blur(function() {
+    return validateField($RegisterMessage, /^.+$/);
   });
 
-  $RegisterForm.submit(function (event) {
-    event.preventDefault();
+  $RegisterForm.submit(function(event) {
     if (validateField($RegisterName, /^[A-Za-z\s]+$/) &&
       validateField($RegisterEmail, /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/) &&
       validateField($RegisterMessage, /^.+$/)) {
       console.log('Form submitted successfully');
+    } else {
+      event.preventDefault();
     }
   });
 });
+
 
 /* Navigation */
 document.querySelectorAll('.header__burger-menu-list-item-link').forEach(anchor => {
